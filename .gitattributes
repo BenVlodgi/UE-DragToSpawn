@@ -1,0 +1,13 @@
+# Normalize line endings to LF in the repo, checkout as CRLF on Windows
+* text=auto
+
+# Source files
+*.h text
+*.cpp text
+*.cs text
+
+# Config
+*.ini text
+*.json text
+*.md text
+*.uplugin text
