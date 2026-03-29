@@ -1,3 +1,10 @@
+<br/>
+<p align="center">
+  <a href="https://github.com/BenVlodgi/UE-DragToSpawn">
+    <img src="https://github.com/user-attachments/assets/d1dc7dde-090f-4bff-959e-367b4241160f" alt="Logo" width="640">
+  </a>
+</p>
+
 # Drag to Spawn
 Unreal Engine Editor Plugin.
 

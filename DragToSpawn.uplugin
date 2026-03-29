@@ -4,7 +4,7 @@
 	"VersionName": "1.0",
 	"FriendlyName": "DragToSpawn",
 	"Description": "Spawn actors by dragging Data Assets or Blueprint Objects from the Content Browser into the level.",
-	"Category": "Other",
+	"Category": "Editor",
 	"CreatedBy": "Dream Seed LLC",
 	"CreatedByURL": "https://benvlodgi.github.io/",
 	"DocsURL": "https://github.com/BenVlodgi/UE-DragToSpawn",
@@ -14,6 +14,7 @@
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
+	"EnabledByDefault": true,
 	"Modules": [
 		{
 			"Name": "DragToSpawn",
