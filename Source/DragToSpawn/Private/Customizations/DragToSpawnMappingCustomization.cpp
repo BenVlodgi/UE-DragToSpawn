@@ -33,12 +33,6 @@ void FDragToSpawnMappingCustomization::CustomizeHeader(TSharedRef<IPropertyHandl
 	ActorClassHandle = StructPropertyHandle->GetChildHandle(GET_MEMBER_NAME_CHECKED(FDragToSpawnMapping, ActorClassToSpawn));
 	PropertyNameHandle = StructPropertyHandle->GetChildHandle(GET_MEMBER_NAME_CHECKED(FDragToSpawnMapping, PropertyName));
 
-	FSimpleDelegate OnClassChanged = FSimpleDelegate::CreateSP(this, &FDragToSpawnMappingCustomization::RebuildPropertyNameOptions);
-	AssetClassHandle->SetOnPropertyValueChanged(OnClassChanged);
-	ActorClassHandle->SetOnPropertyValueChanged(OnClassChanged);
-
-	RebuildPropertyNameOptions();
-
 	const float Padding = 4.f;
 	const bool bIsFirstElement = StructPropertyHandle->GetIndexInArray() == 0;
 
@@ -84,6 +78,7 @@ void FDragToSpawnMappingCustomization::CustomizeHeader(TSharedRef<IPropertyHandl
 				.ButtonStyle(FAppStyle::Get(), "NoBorder")
 				.OnGetMenuContent_Lambda([this]() -> TSharedRef<SWidget>
 				{
+					RebuildPropertyNameOptions();
 					return SNew(SBox)
 						.MaxDesiredHeight(200.f)
 						[
