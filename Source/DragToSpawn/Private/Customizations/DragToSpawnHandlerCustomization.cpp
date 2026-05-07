@@ -47,7 +47,7 @@ void FDragToSpawnHandlerCustomization::CustomizeDetails(IDetailLayoutBuilder& De
 		return;
 	}
 
-	IDetailCategoryBuilder& Category = DetailBuilder.EditCategory("Drag to Spawn", FText::GetEmpty(), ECategoryPriority::Important);
+	IDetailCategoryBuilder& Category = DetailBuilder.EditCategory("DragToSpawn", FText::GetEmpty(), ECategoryPriority::Important);
 
 	Category.AddCustomRow(LOCTEXT("RegistrationRow", "Registration"))
 		.WholeRowContent()
